@@ -1,11 +1,9 @@
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
 import rootReducer from "../reducers/index";
+import { fetchMenu } from "../actions/index"
 
-const store = createStore(rootReducer);
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
-/*function store(){
-    return  createStore(rootReducer);
-}
-*/
 
 export default store;

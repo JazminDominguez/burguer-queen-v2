@@ -23,7 +23,7 @@
                 }
             }
         },
-        "latemenu": {
+        "meal": {
             "food": {
                 "BurgerS": {
                     "name": "Hamburguesa Simple",

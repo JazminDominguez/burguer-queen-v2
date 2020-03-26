@@ -1,12 +1,27 @@
-import React from "react";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import axios from "axios";
+import * as actionCreators from "../actions/index.js"
 
-const MealType = () => {
-    return(
-        <div>
-        <h1>Desayuno</h1>
-        <h1>Comida</h1>
-        </div>
-    )
+
+class ConnectedList extends React.Component {
+    render(){
+        return(
+            <div>
+           <p>menu:</p>
+           <button onClick={this.props.fetchBreakfast}>Desayuno</button>
+           <button onClick={this.props.fetchMeal}>Comida</button>
+           </div>
+        )
+    }
 }
 
-export default MealType;
+
+const mapStateToProps = state => {
+    return state
+};
+
+
+const List = connect(mapStateToProps, actionCreators)(ConnectedList);
+
+export default List
