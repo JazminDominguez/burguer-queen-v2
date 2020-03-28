@@ -1,1 +1,24 @@
 //aqui van los estilos base del proyecto
+body {
+  background-color: $background-light !important;
+  font-family: Helvetica, Arial, Helvetica, sans-serif;
+  color: white !important;
+}
+
+.mealType-container {
+  position: absolute;
+  top: 25%;
+}
+
+.icon-container {
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+
+  > p {
+    font-size: 2em;
+    font-weight: 700;
+    color: white;
+    margin: 20px;
+  }
+}

@@ -6,7 +6,7 @@ export function fetchBreakfast(){
         return axios.get("./menu.json")
         .then(res => {
             dispatch(selectBreakfast(res.data.data.breakfast));
-            console.log(res.data.data.breakfast);     
+            console.log(res.data.data);     
         })
     }
 }
