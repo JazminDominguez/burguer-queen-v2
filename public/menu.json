@@ -1,69 +1,89 @@
 {
-    "type": "menu",
-    "format": "standAloneComplex",
-    "version": "6.24.1",
-    "data": {
-        "breakfast": {
-            "food": {
-                "name": "Sandwich de jamón y queso",
-                "price": 10
-            },
-            "beverage": {
-                "CoffeeA": {
-                    "name": "Café americano",
-                    "price": 5
-                },
-                "CoffeeL": {
-                    "name": "Café con Leche",
-                    "price": 7
-                },
-                "Juice": {
-                    "name": "Jugo de frutas natural",
-                    "price": 7
-                }
-            }
+  "type": "menu",
+  "format": "standAloneComplex",
+  "version": "6.24.1",
+  "data": {
+    "breakfast": {
+      "platillo": {
+        "name": "Sandwich de jamón y queso",
+        "price": 10
+      },
+      "bebida": {
+        "CoffeeA": {
+          "name": "Café americano",
+          "price": 5
         },
-        "meal": {
-            "food": {
-                "BurgerS": {
-                    "name": "Hamburguesa Simple",
-                    "price": 10,
-                    "meat": ["res", "pollo", "vegetariana"]
-                },
-                "BurgerD": {
-                    "name": "Hamburguesa Doble",
-                    "price": 15,
-                    "meat": ["res", "pollo", "vegetariana"]
-                }
-            },
-            "beverage": {
-                "Water500": {
-                    "name": "Agua 500ml",
-                    "price": 5
-                },
-                "Wate750": {
-                    "name": "Agua 750ml",
-                    "price": 7
-                },
-                "Soda500": {
-                    "name": "Soda 500ml",
-                    "price": 7
-                },
-                "Soda750": {
-                    "name": "Soda 750ml",
-                    "price": 10
-                }
-            },
-            "addings": {
-                "Ffries": {
-                    "name": "Papas fritas",
-                    "price": 5
-                },
-                "Ronion": {
-                    "name": "Aros de cebolla",
-                    "price": 5
-                }
-            }
+        "CoffeeL": {
+          "name": "Café con Leche",
+          "price": 7
+        },
+        "Juice": {
+          "name": "Jugo de frutas natural",
+          "price": 7
         }
+      },
+      "extras": {
+        "cheese": {
+          "name": "Queso",
+          "price": 1
+        },
+        "egg": {
+          "name": "huevo",
+          "price": 1
+        }
+      }
+    },
+    "meal": {
+      "platillo": {
+        "BurgerS": {
+          "name": "Hamburguesa Simple",
+          "price": 10,
+          "meat": ["res", "pollo", "vegetariana"]
+        },
+        "BurgerD": {
+          "name": "Hamburguesa Doble",
+          "price": 15,
+          "meat": ["res", "pollo", "vegetariana"]
+        }
+      },
+      "bebida": {
+        "Water500": {
+          "name": "Agua 500ml",
+          "price": 5
+        },
+        "Wate750": {
+          "name": "Agua 750ml",
+          "price": 7
+        },
+        "Soda500": {
+          "name": "Soda 500ml",
+          "price": 7
+        },
+        "Soda750": {
+          "name": "Soda 750ml",
+          "price": 10
+        }
+      },
+      "guarnicion": {
+        "Ffries": {
+          "name": "Papas fritas",
+          "price": 5
+        },
+        "Ronion": {
+          "name": "Aros de cebolla",
+          "price": 5
+        }
+      },
+      "extras": {
+        "cheese": {
+          "name": "Queso",
+          "price": 1
+        },
+        "egg": {
+          "name": "huevo",
+          "price": 1
+        }
+      }
     }
+  }
 }

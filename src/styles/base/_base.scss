@@ -22,3 +22,38 @@ body {
     margin: 20px;
   }
 }
+
+.footer-button {
+  background-color: red;
+  border-radius: 5px;
+  width: 6em;
+  height: 4em;
+  position: relative;
+  text-align: center;
+
+  > p {
+    position: absolute;
+    top: 25%;
+    right: 25%;
+  }
+}
+
+.platillo {
+  background-color: $burger-double;
+}
+
+.bebida {
+  background-color: $drinks;
+}
+
+.extras {
+  background-color: $extras;
+}
+
+.standar-color {
+  background-color: $nav-button;
+}
+
+.guarnicion {
+  background-color: $addings;
+}
