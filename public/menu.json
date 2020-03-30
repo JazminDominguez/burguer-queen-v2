@@ -31,6 +31,20 @@
           "name": "huevo",
           "price": 1
         }
+      },
+      "ingredientes": {
+        "lechuga": {
+          "name": "S/N lechuga"
+        },
+        "cebolla": {
+          "name": "S/N cebolla"
+        },
+        "jitomate": {
+          "name": "S/N jitomate"
+        },
+        "pepinillos": {
+          "name": "S/N cebolla"
+        }
       }
     },
     "meal": {
@@ -82,6 +96,20 @@
         "egg": {
           "name": "huevo",
           "price": 1
+        }
+      },
+      "ingredientes": {
+        "lechuga": {
+          "name": "S/N lechuga"
+        },
+        "cebolla": {
+          "name": "S/N cebolla"
+        },
+        "jitomate": {
+          "name": "S/N jitomate"
+        },
+        "pepinillos": {
+          "name": "S/N cebolla"
         }
       }
     }

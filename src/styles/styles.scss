@@ -1,4 +1,7 @@
 //aqui se importan todas las hojas que se necesiten de scss
 @import "./base/variables";
 @import "./base/base";
+@import "./base/header";
+@import "./base/footer";
+@import "./base/ticket";
 @import "~bootstrap/scss/bootstrap";

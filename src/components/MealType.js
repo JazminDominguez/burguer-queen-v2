@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import * as actionCreators from "../actions/index.js";
 import { Container, Row, Col, Image } from "react-bootstrap";
 
-import breakfastIcon from "../assets/180.png";
+import breakfastIcon from "../assets/sandwich-180.png";
 import mealIcon from "../assets/comida-180.png";
 
 class ConnectedList extends React.Component {

@@ -5,6 +5,11 @@ body {
   color: white !important;
 }
 
+.menu-board {
+  position: relative;
+  height: 100vh;
+}
+
 .mealType-container {
   position: absolute;
   top: 25%;
@@ -26,7 +31,6 @@ body {
 .footer-button {
   background-color: red;
   border-radius: 5px;
-  width: 6em;
   height: 4em;
   position: relative;
   text-align: center;
@@ -35,6 +39,8 @@ body {
     position: absolute;
     top: 25%;
     right: 25%;
+    word-break: break-word;
+    hyphens: auto;
   }
 }
 
@@ -56,4 +62,8 @@ body {
 
 .guarnicion {
   background-color: $addings;
+}
+
+.ingredientes {
+  background-color: $nav-button;
 }

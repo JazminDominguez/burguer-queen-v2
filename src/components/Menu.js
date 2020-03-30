@@ -5,30 +5,34 @@ import { Container, Row, Col } from "react-bootstrap";
 
 //import ItemButton from "./ItemButton";
 import FooterButton from "./FooterButtons";
+import Footer from "./Footer";
+import Header from "./Header";
 
 class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       menuBoard: {},
-      footerOptions: []
+      footerOptions: [],
+      mealType: undefined
     };
   }
 
   componentDidUpdate(prevProps) {
-    const { menu } = this.props;
+    const { menu, meal } = this.props;
     // Uso tipico (no olvides de comparar los props):
     if (menu !== prevProps.menu) {
       console.log("hola, soy componend did update");
       this.setState({
-        footerOptions: Object.keys(menu)
+        footerOptions: Object.keys(menu),
+        mealType: meal
       });
     }
   }
 
   render() {
     const { menu } = this.props;
-    const { footerOptions } = this.state;
+    const { footerOptions, mealType } = this.state;
 
     if (Object.keys(menu).length === 0) {
       console.log("soy el menu vacio");
@@ -44,10 +48,20 @@ class Menu extends React.Component {
     ));
 
     return (
-      <div>
-        <p>Hola soy el menú y voy a pintar:</p>
-        <Container>
-          <Row>{mappedFooterButtons}</Row>
+      <div className="menu-board">
+        <Container fluid>
+          <Row>
+            <Col sm={8} md={8} style={{ paddingLeft: "0px" }}>
+              <Header mealType={mealType} clientName={"Monica"} />
+              <p>Hola soy el menú y voy a pintar:</p>
+              <Footer>
+                <Row>{mappedFooterButtons}</Row>
+              </Footer>
+            </Col>
+            <Col sm={4} md={4} className="ticket-component">
+              TICKET AREA
+            </Col>
+          </Row>
         </Container>
       </div>
     );
