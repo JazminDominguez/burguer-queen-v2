@@ -42,7 +42,7 @@ class Menu extends React.Component {
     }
 
     const mappedFooterButtons = footerOptions.map(option => (
-      <Col>
+      <Col md={3}>
         <FooterButton key={option} name={option} />
       </Col>
     ));
@@ -52,11 +52,21 @@ class Menu extends React.Component {
         <Container fluid>
           <Row>
             <Col sm={8} md={8} style={{ paddingLeft: "0px" }}>
-              <Header mealType={mealType} clientName={"Monica"} />
-              <p>Hola soy el menú y voy a pintar:</p>
-              <Footer>
-                <Row>{mappedFooterButtons}</Row>
-              </Footer>
+              <Row className="flex-column">
+                <Col md={12}>
+                  <Header mealType={mealType} clientName={"Monica"} />
+                </Col>
+                <Col>
+                  <div className="board">
+                    <p>soy board</p>
+                  </div>
+                </Col>
+                <Col md={12} className="footer">
+                  <Row style={{ paddingLeft: "20px" }}>
+                    {mappedFooterButtons}
+                  </Row>
+                </Col>
+              </Row>
             </Col>
             <Col sm={4} md={4} className="ticket-component">
               TICKET AREA
@@ -75,4 +85,38 @@ export default connect(mapStateToProps, actionCreators)(Menu);
 
 /* Comida tiene: platillo, bebidas, guarnición, ok, extras sin ingredientes
 Desayuno tiene: platillo, bebidas, sin ingredientes, extras, ok
+*/
+
+/*
+    return (
+      <div className="menu-board">
+        <Container fluid>
+          <Row>
+            <Col
+              sm={8}
+              md={8}
+              style={{ paddingLeft: "0px" }}
+              className="board-area"
+            >
+              <Header
+                mealType={mealType}
+                clientName={"Monica"}
+                className="extremes"
+              />
+              <div className="board">
+                <p>Hola soy el menú y voy a pintar:</p>
+              </div>
+              <Footer className="extremes">
+                <Row>{mappedFooterButtons}</Row>
+              </Footer>
+            </Col>
+            <Col sm={4} md={4} className="ticket-component">
+              TICKET AREA
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    );
+  }
+}
 */

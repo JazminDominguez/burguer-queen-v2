@@ -20,7 +20,7 @@ const Header = ({ mealType, clientName }) => {
 
   const listNumbers = numbers.map(number => {
     return (
-      <Col key={number.value} id={number.value}>
+      <Col className="number" key={number.value} id={number.value}>
         {number.item}
       </Col>
     );
@@ -32,15 +32,17 @@ const Header = ({ mealType, clientName }) => {
         <Col>
           <Image src={burgerQueenIcon} className="header-icons" />
         </Col>
-        <Col>{mealType}</Col>
+        <Col className="text-container">
+          <p>{mealType}</p>
+        </Col>
         <Col>
           <Image src={userIcon} className="header-icons" />
         </Col>
-        <Col>
+        <Col className="text-container">
           <p>{clientName}</p>
         </Col>
       </Row>
-      <Row>{listNumbers}</Row>
+      <Row className="number-container">{listNumbers}</Row>
     </Container>
   );
 };
