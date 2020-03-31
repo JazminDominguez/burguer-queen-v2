@@ -30,6 +30,11 @@ class Menu extends React.Component {
     }
   }
 
+  handleChange = e => {
+    const { addClient } = this.props;
+    addClient(e.target.value);
+  };
+
   render() {
     const { menu } = this.props;
     const { footerOptions, mealType } = this.state;
@@ -54,7 +59,7 @@ class Menu extends React.Component {
             <Col sm={8} md={8} style={{ paddingLeft: "0px" }}>
               <Row className="flex-column">
                 <Col md={12}>
-                  <Header mealType={mealType} clientName={"Monica"} />
+                  <Header mealType={mealType} addClient={this.handleChange} />
                 </Col>
                 <Col>
                   <div className="board">

@@ -1,2 +1,3 @@
 export const SELECT_BREAKFAST = "SELECT_BREAKFAST";
 export const SELECT_MEAL = "SELECT_MEAL";
+export const ADD_CLIENT_NAME = "ADD_CLIENT_NAME";

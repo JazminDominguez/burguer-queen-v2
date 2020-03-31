@@ -1,5 +1,9 @@
 import axios from "axios";
-import { SELECT_BREAKFAST, SELECT_MEAL } from "../constants/action-types";
+import {
+  SELECT_BREAKFAST,
+  SELECT_MEAL,
+  ADD_CLIENT_NAME
+} from "../constants/action-types";
 
 export function fetchBreakfast() {
   return dispatch => {
@@ -32,5 +36,12 @@ export function selectMeal(menu) {
     type: SELECT_MEAL,
     menu: menu,
     meal: "Comida"
+  };
+}
+
+export function addClient(clientName) {
+  return {
+    type: ADD_CLIENT_NAME,
+    clientName: clientName
   };
 }

@@ -1,8 +1,13 @@
-import { SELECT_BREAKFAST, SELECT_MEAL } from "../constants/action-types";
+import {
+  SELECT_BREAKFAST,
+  SELECT_MEAL,
+  ADD_CLIENT_NAME
+} from "../constants/action-types";
 
 const initialState = {
   menu: [],
-  meal: undefined
+  meal: undefined,
+  clientName: undefined
 };
 
 function rootReducer(state = initialState, action) {
@@ -18,6 +23,11 @@ function rootReducer(state = initialState, action) {
         ...state,
         menu: action.menu,
         meal: action.meal
+      };
+    case ADD_CLIENT_NAME:
+      return {
+        ...state,
+        clientName: action.clientName
       };
     default:
       return state;

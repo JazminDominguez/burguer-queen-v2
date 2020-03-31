@@ -4,7 +4,7 @@ import { Row, Container, Col, Image } from "react-bootstrap";
 import userIcon from "../assets/user-180.png";
 import burgerQueenIcon from "../assets/icon-180.png";
 
-const Header = ({ mealType, clientName }) => {
+const Header = ({ mealType, addClient }) => {
   const numbers = [
     { value: 0, item: "0" },
     { value: 1, item: "1" },
@@ -39,7 +39,11 @@ const Header = ({ mealType, clientName }) => {
           <Image src={userIcon} className="header-icons" />
         </Col>
         <Col className="text-container">
-          <p>{clientName}</p>
+          <input
+            name="clientName"
+            onChange={addClient}
+            placeholder="ingresa nombre del cliente"
+          />
         </Col>
       </Row>
       <Row className="number-container">{listNumbers}</Row>
