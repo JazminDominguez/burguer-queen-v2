@@ -4,48 +4,50 @@
   "version": "6.24.1",
   "data": {
     "breakfast": {
-      "platillo": {
-        "name": "Sandwich de jamón y queso",
-        "price": 10
-      },
-      "bebida": {
-        "CoffeeA": {
+      "platillo": [
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 10
+        }
+      ],
+      "bebida": [
+        {
           "name": "Café americano",
           "price": 5
         },
-        "CoffeeL": {
+        {
           "name": "Café con Leche",
           "price": 7
         },
-        "Juice": {
-          "name": "Jugo de frutas natural",
+        {
+          "name": "Jugo de frutas",
           "price": 7
         }
-      },
-      "extras": {
-        "cheese": {
+      ],
+      "extras": [
+        {
           "name": "Queso",
           "price": 1
         },
-        "egg": {
+        {
           "name": "huevo",
           "price": 1
         }
-      },
-      "ingredientes": {
-        "lechuga": {
+      ],
+      "ingredientes": [
+        {
           "name": "S/N lechuga"
         },
-        "cebolla": {
+        {
           "name": "S/N cebolla"
         },
-        "jitomate": {
+        {
           "name": "S/N jitomate"
         },
-        "pepinillos": {
+        {
           "name": "S/N cebolla"
         }
-      }
+      ]
     },
     "meal": {
       "platillo": {

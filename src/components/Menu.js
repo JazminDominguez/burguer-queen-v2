@@ -5,14 +5,15 @@ import { Container, Row, Col } from "react-bootstrap";
 
 //import ItemButton from "./ItemButton";
 import FooterButton from "./FooterButtons";
-import Footer from "./Footer";
+import ItemButton from "./ItemButton";
 import Header from "./Header";
 
 class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      menuBoard: {},
+      isLoaded: false,
+      menuBoard: undefined,
       footerOptions: [],
       mealType: undefined
     };
@@ -25,7 +26,8 @@ class Menu extends React.Component {
       console.log("hola, soy componend did update");
       this.setState({
         footerOptions: Object.keys(menu),
-        mealType: meal
+        mealType: meal,
+        isLoaded: true
       });
     }
   }
@@ -37,18 +39,39 @@ class Menu extends React.Component {
 
   render() {
     const { menu } = this.props;
-    const { footerOptions, mealType } = this.state;
+    const { footerOptions, mealType, menuBoard } = this.state;
 
     if (Object.keys(menu).length === 0) {
       console.log("soy el menu vacio");
     } else {
-      console.log("soy menu con info", menu.platillo.name);
+      console.log("soy menu con info", menu);
       console.log("soy object keys", Object.keys(menu));
     }
 
+    /*
     const mappedFooterButtons = footerOptions.map(option => (
       <Col md={3}>
-        <FooterButton key={option} name={option} />
+        <FooterButton key={option} name={option} menu={menu} />
+      </Col>
+    ));
+*/
+
+    const setItems = option => {
+      const { menuBoard } = this.state;
+      this.setState({
+        menuBoard: menu[option]
+      });
+    };
+
+    const mappedFooterButtons = footerOptions.map(option => (
+      <Col md={3}>
+        <div
+          key={option}
+          className={`footer-button ${option}`}
+          onClick={() => setItems(option)}
+        >
+          <p>{option}</p>
+        </div>
       </Col>
     ));
 
@@ -63,7 +86,10 @@ class Menu extends React.Component {
                 </Col>
                 <Col>
                   <div className="board">
-                    <p>soy board</p>
+                    {menuBoard !== undefined &&
+                      menuBoard.map(item => (
+                        <ItemButton itemName={item.name} />
+                      ))}
                   </div>
                 </Col>
                 <Col md={12} className="footer">
