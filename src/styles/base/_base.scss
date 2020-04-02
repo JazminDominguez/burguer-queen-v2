@@ -1,0 +1,64 @@
+//aqui van los estilos base del proyecto
+body {
+  background-color: $background-light !important;
+  font-family: Helvetica, Arial, Helvetica, sans-serif;
+  color: white !important;
+}
+
+.menu-board {
+  position: relative;
+  height: 100vh;
+}
+
+.mealType-container {
+  position: absolute;
+  top: 25%;
+}
+
+.icon-container {
+  text-align: center;
+  align-items: center;
+  padding-top: 20px;
+
+  > p {
+    font-size: 2em;
+    font-weight: 700;
+    color: white;
+    margin: 20px;
+  }
+}
+
+.footer-button {
+  border-radius: 5px;
+  height: 4em;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  min-width: 85px;
+  color: black;
+  font-weight: bold;
+}
+
+.platillo {
+  background-color: $burger-double;
+}
+
+.bebida {
+  background-color: $drinks;
+}
+
+.extras {
+  background-color: $extras;
+}
+
+.standar-color {
+  background-color: $nav-button;
+}
+
+.guarnicion {
+  background-color: $addings;
+}
+
+.ingredientes {
+  background-color: $nav-button;
+}

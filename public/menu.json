@@ -1,0 +1,120 @@
+{
+  "type": "menu",
+  "format": "standAloneComplex",
+  "version": "6.24.1",
+  "data": {
+    "breakfast": {
+      "platillo": [
+        {
+          "name": "Sandwich de jamón y queso",
+          "price": 10,
+          "logo": "https://github.com/JazminDominguez/burguer-queen-v2/blob/develop/src/assets/sandwich-180.png?raw=true"
+        }
+      ],
+      "bebida": [
+        {
+          "name": "Café americano",
+          "price": 5
+        },
+        {
+          "name": "Café con Leche",
+          "price": 7
+        },
+        {
+          "name": "Jugo de frutas",
+          "price": 7
+        }
+      ],
+      "extras": [
+        {
+          "name": "Queso",
+          "price": 1
+        },
+        {
+          "name": "huevo",
+          "price": 1
+        }
+      ],
+      "ingredientes": [
+        {
+          "name": "S/N lechuga"
+        },
+        {
+          "name": "S/N cebolla"
+        },
+        {
+          "name": "S/N jitomate"
+        },
+        {
+          "name": "S/N cebolla"
+        }
+      ]
+    },
+    "meal": {
+      "platillo": {
+        "BurgerS": {
+          "name": "Hamburguesa Simple",
+          "price": 10,
+          "meat": ["res", "pollo", "vegetariana"]
+        },
+        "BurgerD": {
+          "name": "Hamburguesa Doble",
+          "price": 15,
+          "meat": ["res", "pollo", "vegetariana"]
+        }
+      },
+      "bebida": {
+        "Water500": {
+          "name": "Agua 500ml",
+          "price": 5
+        },
+        "Wate750": {
+          "name": "Agua 750ml",
+          "price": 7
+        },
+        "Soda500": {
+          "name": "Soda 500ml",
+          "price": 7
+        },
+        "Soda750": {
+          "name": "Soda 750ml",
+          "price": 10
+        }
+      },
+      "guarnicion": {
+        "Ffries": {
+          "name": "Papas fritas",
+          "price": 5
+        },
+        "Ronion": {
+          "name": "Aros de cebolla",
+          "price": 5
+        }
+      },
+      "extras": {
+        "cheese": {
+          "name": "Queso",
+          "price": 1
+        },
+        "egg": {
+          "name": "huevo",
+          "price": 1
+        }
+      },
+      "ingredientes": {
+        "lechuga": {
+          "name": "S/N lechuga"
+        },
+        "cebolla": {
+          "name": "S/N cebolla"
+        },
+        "jitomate": {
+          "name": "S/N jitomate"
+        },
+        "pepinillos": {
+          "name": "S/N cebolla"
+        }
+      }
+    }
+  }
+}

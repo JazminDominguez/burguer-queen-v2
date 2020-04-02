@@ -1,0 +1,31 @@
+.board {
+  background-color: $background-dark;
+  height: 30em;
+
+  @include tabletPortrait {
+    height: 42em;
+  }
+
+  @include tabletLandscape {
+    height: 29em;
+  }
+}
+
+.item-button-container {
+  border-radius: 10px;
+  max-width: 120px;
+  max-height: 150px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+
+  > p {
+    color: black;
+    font-weight: bold;
+  }
+
+  > img {
+    max-width: 60px;
+    max-height: 60px;
+  }
+}

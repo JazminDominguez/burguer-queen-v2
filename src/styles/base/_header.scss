@@ -1,0 +1,40 @@
+.header {
+  padding: 10px 10px 0px 10px;
+  text-align: center;
+}
+
+.header-icons {
+  height: 40px;
+}
+
+.number {
+  font-size: x-large;
+  font-weight: 600;
+}
+
+.number-container {
+  background-color: $background-dark;
+  padding: 10px;
+  border-bottom: 2px solid;
+  border-color: black;
+}
+
+.text-container {
+  position: relative;
+  height: auto;
+  width: auto;
+
+  > p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  > input {
+    background-color: $background-light;
+    color: white;
+    border: none;
+  }
+}
