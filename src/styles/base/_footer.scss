@@ -3,5 +3,9 @@
 
   > div {
     height: 15em;
+
+    @include tabletLandscape {
+      height: 10em;
+    }
   }
 }

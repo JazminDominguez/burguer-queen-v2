@@ -8,7 +8,7 @@
         {
           "name": "Sandwich de jamón y queso",
           "price": 10,
-          "logo": "../src/assets/sandwich-180.png"
+          "logo": "https://github.com/JazminDominguez/burguer-queen-v2/blob/develop/src/assets/sandwich-180.png?raw=true"
         }
       ],
       "bebida": [

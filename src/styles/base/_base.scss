@@ -29,19 +29,14 @@ body {
 }
 
 .footer-button {
-  background-color: red;
   border-radius: 5px;
   height: 4em;
-  position: relative;
+  display: table-cell;
+  vertical-align: middle;
   text-align: center;
-
-  > p {
-    position: absolute;
-    top: 25%;
-    right: 25%;
-    word-break: break-word;
-    hyphens: auto;
-  }
+  min-width: 85px;
+  color: black;
+  font-weight: bold;
 }
 
 .platillo {

@@ -14,6 +14,38 @@ $extras: #eddd4c;
 
 //fonts
 
+//breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-ipad-pro: 1024px;
+$breakpoint-laptop: 1366px;
+$landscape: orientation landscape;
+$portrait: orientation portrait;
+
+//breakpoints mixins
+@mixin tabletPortrait {
+  @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-ipad-pro}) and (orientation: "portrait") {
+    @content;
+  }
+}
+
+@mixin tabletLandscape {
+  @media screen and (min-width: #{$breakpoint-tablet}) and (max-width: #{$breakpoint-ipad-pro}) and (orientation: "landscape") {
+    @content;
+  }
+}
+
+@mixin ipadProPortrait {
+  @media screen and (min-width: #{$breakpoint-ipad-pro}) and (max-width: #{$breakpoint-laptop}) and (orientation: "portrait") {
+    @content;
+  }
+}
+
+@mixin ipadProLandscape {
+  @media screen and (min-width: #{$breakpoint-ipad-pro}) and (max-width: #{$breakpoint-laptop}) and (orientation: "landscape") {
+    @content;
+  }
+}
+
 // Defining values
 $small-range: (0em, 40em); /* 0, 640px */
 $medium-range: (40.063em, 64em); /* 641px, 1024px */

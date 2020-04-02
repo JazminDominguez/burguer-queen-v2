@@ -6,9 +6,10 @@ const ItemButton = ({ icon, itemName, color }) => {
     <div
       className={`item-button-container ${color}`}
       onClick={() => {
-        console.log({ color });
+        console.log({ icon });
       }}
     >
+      <Image src={icon} />
       <p>{itemName}</p>
     </div>
   );
