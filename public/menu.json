@@ -7,7 +7,8 @@
       "platillo": [
         {
           "name": "Sandwich de jamón y queso",
-          "price": 10
+          "price": 10,
+          "logo": "../src/assets/sandwich-180.png"
         }
       ],
       "bebida": [

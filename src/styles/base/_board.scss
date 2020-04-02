@@ -2,3 +2,18 @@
   background-color: $background-dark;
   height: 30em;
 }
+
+.item-button-container {
+  max-width: 120px;
+  max-height: 150px;
+
+  > p {
+    color: black;
+    font-weight: bold;
+  }
+
+  .icon {
+    max-width: 100px;
+    max-height: 90px;
+  }
+}

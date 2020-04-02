@@ -15,7 +15,8 @@ class Menu extends React.Component {
       isLoaded: false,
       menuBoard: undefined,
       footerOptions: [],
-      mealType: undefined
+      mealType: undefined,
+      colorClass: undefined
     };
   }
 
@@ -39,7 +40,7 @@ class Menu extends React.Component {
 
   render() {
     const { menu } = this.props;
-    const { footerOptions, mealType, menuBoard } = this.state;
+    const { footerOptions, mealType, menuBoard, colorClass } = this.state;
 
     if (Object.keys(menu).length === 0) {
       console.log("soy el menu vacio");
@@ -57,9 +58,10 @@ class Menu extends React.Component {
 */
 
     const setItems = option => {
-      const { menuBoard } = this.state;
+      const { menuBoard, colorClass } = this.state;
       this.setState({
-        menuBoard: menu[option]
+        menuBoard: menu[option],
+        colorClass: [option]
       });
     };
 
@@ -86,10 +88,18 @@ class Menu extends React.Component {
                 </Col>
                 <Col>
                   <div className="board">
-                    {menuBoard !== undefined &&
-                      menuBoard.map(item => (
-                        <ItemButton itemName={item.name} />
-                      ))}
+                    <Row style={{ paddingLeft: "20px" }}>
+                      {menuBoard !== undefined &&
+                        menuBoard.map(item => (
+                          <Col>
+                            <ItemButton
+                              icon={item.logo}
+                              color={colorClass}
+                              itemName={item.name}
+                            />
+                          </Col>
+                        ))}
+                    </Row>
                   </div>
                 </Col>
                 <Col md={12} className="footer">
