@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import ItemButton from "./ItemButton";
 import Header from "./Header";
+import TicketBar from "./TicketBar";
 
 class Menu extends React.Component {
   constructor(props) {
@@ -37,15 +38,8 @@ class Menu extends React.Component {
   };
 
   render() {
-    const { menu } = this.props;
+    const { menu, clientName } = this.props;
     const { footerOptions, mealType, menuBoard, colorClass } = this.state;
-
-    if (Object.keys(menu).length === 0) {
-      console.log("soy el menu vacio");
-    } else {
-      console.log("soy menu con info", menu);
-      console.log("soy object keys", Object.keys(menu));
-    }
 
     const setItems = option => {
       this.setState({
@@ -85,6 +79,7 @@ class Menu extends React.Component {
                               icon={item.logo}
                               color={colorClass}
                               itemName={item.name}
+                              itemPrice={item.price}
                             />
                           </Col>
                         ))}
@@ -98,8 +93,13 @@ class Menu extends React.Component {
                 </Col>
               </Row>
             </Col>
-            <Col sm={4} md={4} className="ticket-component">
-              TICKET AREA
+            <Col
+              sm={4}
+              md={4}
+              className="ticket-component"
+              style={{ padding: "0px" }}
+            >
+              <TicketBar clientName={clientName} />
             </Col>
           </Row>
         </Container>
