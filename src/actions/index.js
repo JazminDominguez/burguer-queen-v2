@@ -2,7 +2,12 @@ import axios from "axios";
 import {
   SELECT_BREAKFAST,
   SELECT_MEAL,
-  ADD_CLIENT_NAME
+  ADD_CLIENT_NAME,
+  ADD_TICKET_ITEM,
+  EDIT_TICKET_ITEM,
+  DELETE_TICKET_ITEM,
+  SEND_ORDER,
+  CLEAN_FOR_NEW_ORDER
 } from "../constants/action-types";
 
 export function fetchBreakfast() {
@@ -45,3 +50,36 @@ export function addClient(clientName) {
     clientName: clientName
   };
 }
+
+export const addTicketItem = ({
+  item = undefined,
+  price = 0,
+  qty = 0
+} = {}) => ({
+  type: ADD_TICKET_ITEM,
+  product: {
+    item,
+    price,
+    qty
+  }
+});
+
+/*
+// ADD_EXPENSE
+export const addExpense = ({
+  description = "",
+  note = "",
+  amount = 0,
+  createdAt = 0
+} = {}) => ({
+  type: "ADD_EXPENSE",
+  expense: {
+    id: uuid(),
+    description,
+    note,
+    amount,
+    createdAt
+  }
+});
+
+*/

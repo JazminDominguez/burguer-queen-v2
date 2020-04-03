@@ -37,8 +37,13 @@ class Menu extends React.Component {
     addClient(e.target.value);
   };
 
+  addItems = e => {
+    const { addTicketItem } = this.props;
+    addTicketItem({ item: e.target.id, price: e.target.value });
+  };
+
   render() {
-    const { menu, clientName } = this.props;
+    const { menu, clientName, ticket } = this.props;
     const { footerOptions, mealType, menuBoard, colorClass } = this.state;
 
     const setItems = option => {
@@ -76,6 +81,7 @@ class Menu extends React.Component {
                         menuBoard.map(item => (
                           <Col>
                             <ItemButton
+                              addItems={this.addItems}
                               icon={item.logo}
                               color={colorClass}
                               itemName={item.name}
@@ -99,7 +105,7 @@ class Menu extends React.Component {
               className="ticket-component"
               style={{ padding: "0px" }}
             >
-              <TicketBar clientName={clientName} />
+              <TicketBar clientName={clientName} ticketItems={ticket} />
             </Col>
           </Row>
         </Container>

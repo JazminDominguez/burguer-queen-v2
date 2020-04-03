@@ -28,7 +28,7 @@ const TicketBar = ({ clientName, ticketItems }) => {
           {clientName}
         </Col>
       </Row>
-      <Row>{ticketItems}</Row>
+      <Row>{ticketItems.item}</Row>
     </Container>
   );
 };
