@@ -1,7 +1,10 @@
-import { createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware, combineReducers } from "redux";
 import thunk from "redux-thunk";
-import rootReducer from "../reducers/index";
+import menuReducer from "../reducers/index";
+import ticketReducer from "../reducers/ticket-reducer";
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+const reducer = combineReducers({ ticket: ticketReducer, menu: menuReducer });
+
+const store = createStore(reducer, applyMiddleware(thunk));
 
 export default store;

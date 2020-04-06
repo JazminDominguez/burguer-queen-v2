@@ -15,7 +15,7 @@ class Menu extends React.Component {
       menuBoard: undefined,
       footerOptions: [],
       mealType: undefined,
-      colorClass: undefined
+      colorClass: undefined,
     };
   }
 
@@ -27,17 +27,17 @@ class Menu extends React.Component {
       this.setState({
         footerOptions: Object.keys(menu),
         mealType: meal,
-        isLoaded: true
+        isLoaded: true,
       });
     }
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     const { addClient } = this.props;
     addClient(e.target.value);
   };
 
-  addItems = e => {
+  addItems = (e) => {
     const { addTicketItem } = this.props;
     addTicketItem({ item: e.target.id, price: e.target.value });
   };
@@ -46,14 +46,14 @@ class Menu extends React.Component {
     const { menu, clientName, ticket } = this.props;
     const { footerOptions, mealType, menuBoard, colorClass } = this.state;
 
-    const setItems = option => {
+    const setItems = (option) => {
       this.setState({
         menuBoard: menu[option],
-        colorClass: [option]
+        colorClass: [option],
       });
     };
 
-    const mappedFooterButtons = footerOptions.map(option => (
+    const mappedFooterButtons = footerOptions.map((option) => (
       <Col md={3}>
         <div
           key={option}
@@ -78,7 +78,7 @@ class Menu extends React.Component {
                   <div className="board">
                     <Row style={{ paddingLeft: "20px" }}>
                       {menuBoard !== undefined &&
-                        menuBoard.map(item => (
+                        menuBoard.map((item) => (
                           <Col>
                             <ItemButton
                               addItems={this.addItems}
@@ -114,7 +114,12 @@ class Menu extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return state;
+const mapStateToProps = (state) => {
+  return {
+    menu: state.menu.menu,
+    meal: state.menu.meal,
+    clientName: state.menu.clientName,
+    ticket: state.ticket,
+  };
 };
 export default connect(mapStateToProps, actionCreators)(Menu);
