@@ -12,7 +12,7 @@ const ticketReducerDefaultState = [];
 export default (state = ticketReducerDefaultState, action) => {
   switch (action.type) {
     case ADD_TICKET_ITEM:
-      return [...state, action.ticket];
+      return [...state, action.product];
     case DELETE_TICKET_ITEM:
       return state.filter(({ id }) => id !== action.id);
     case EDIT_TICKET_ITEM:
