@@ -8,113 +8,136 @@
         {
           "name": "Sandwich de jamón y queso",
           "price": 10,
-          "logo": "https://github.com/JazminDominguez/burguer-queen-v2/blob/develop/src/assets/sandwich-180.png?raw=true"
+          "logo": "./assets/sandwich-180.png"
         }
       ],
       "bebida": [
         {
           "name": "Café americano",
-          "price": 5
+          "price": 5,
+          "logo": "./assets/cafe-180.png"
         },
         {
           "name": "Café con Leche",
-          "price": 7
+          "price": 7,
+          "logo": "./assets/cafe-leche-180.png"
         },
         {
           "name": "Jugo de frutas",
-          "price": 7
+          "price": 7,
+          "logo": "./assets/naranja-180.png"
         }
       ],
       "extras": [
         {
           "name": "Queso",
-          "price": 1
+          "price": 1,
+          "logo": "./assets/queso-180.png"
         },
         {
           "name": "huevo",
-          "price": 1
+          "price": 1,
+          "logo": "./assets/huevo-180.png"
         }
       ],
       "ingredientes": [
         {
-          "name": "S/N lechuga"
+          "name": "S/N lechuga",
+          "logo": "./assets/lechuga-180.png"
         },
         {
-          "name": "S/N cebolla"
+          "name": "S/N cebolla",
+          "logo": "./assets/cebolla-180.png"
         },
         {
-          "name": "S/N jitomate"
+          "name": "S/N jitomate",
+          "logo": "./assets/tomate-180.png"
         },
         {
-          "name": "S/N cebolla"
+          "name": "S/N pepinillos",
+          "logo": "./assets/pepinillos-180.png"
         }
       ]
     },
     "meal": {
-      "platillo": {
-        "BurgerS": {
+      "platillo": [
+        {
           "name": "Hamburguesa Simple",
           "price": 10,
-          "meat": ["res", "pollo", "vegetariana"]
+          "meat": ["res", "pollo", "vegetariana"],
+          "logo": "./assets/burger-180.png"
         },
-        "BurgerD": {
+        {
           "name": "Hamburguesa Doble",
           "price": 15,
-          "meat": ["res", "pollo", "vegetariana"]
+          "meat": ["res", "pollo", "vegetariana"],
+          "logo": "./assets/burger-180.png"
         }
-      },
-      "bebida": {
-        "Water500": {
+      ],
+      "bebida": [
+        {
           "name": "Agua 500ml",
-          "price": 5
+          "price": 5,
+          "logo": "./assets/agua-180.png"
         },
-        "Wate750": {
+        {
           "name": "Agua 750ml",
-          "price": 7
+          "price": 7,
+          "logo": "./assets/agua-180.png"
         },
-        "Soda500": {
+        {
           "name": "Soda 500ml",
-          "price": 7
+          "price": 7,
+          "logo": "./assets/refresco-180.png"
         },
-        "Soda750": {
+        {
           "name": "Soda 750ml",
-          "price": 10
+          "price": 10,
+          "logo": "./assets/refresco-180.png"
         }
-      },
-      "guarnicion": {
-        "Ffries": {
+      ],
+      "guarnicion": [
+        {
           "name": "Papas fritas",
-          "price": 5
+          "price": 5,
+          "logo": "./assets/papas-180.png"
         },
-        "Ronion": {
+        {
           "name": "Aros de cebolla",
-          "price": 5
+          "price": 5,
+          "logo": "./assets/onionRings-180.png"
         }
-      },
-      "extras": {
-        "cheese": {
+      ],
+      "extras": [
+        {
           "name": "Queso",
-          "price": 1
+          "price": 1,
+          "logo": "./assets/queso-180.png"
         },
-        "egg": {
+        {
           "name": "huevo",
-          "price": 1
+          "price": 1,
+          "logo": "./assets/huevo-180.png"
         }
-      },
-      "ingredientes": {
-        "lechuga": {
-          "name": "S/N lechuga"
+      ],
+      "ingredientes": [
+        {
+          "name": "S/N lechuga",
+          "logo": "./assets/lechuga-180.png"
         },
-        "cebolla": {
-          "name": "S/N cebolla"
+        {
+          "name": "S/N cebolla",
+          "logo": "./assets/cebolla-180.png"
         },
-        "jitomate": {
-          "name": "S/N jitomate"
+        {
+          "name": "S/N jitomate",
+          "logo": "./assets/tomate-180.png"
         },
-        "pepinillos": {
-          "name": "S/N cebolla"
+        {
+          "name": "S/N pepinillos",
+          "logo": "./assets/pepinillos-180.png"
         }
-      }
+      ]
     }
   }
 }

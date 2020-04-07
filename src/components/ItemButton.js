@@ -1,18 +1,24 @@
 import React from "react";
 import { Image } from "react-bootstrap";
 
-const ItemButton = ({ icon, itemName, color }) => {
+const ItemButton = ({ icon, itemName, color, itemPrice, addItems }) => {
   return (
-    <div
+    <button
+      id={itemName}
+      value={itemPrice}
       className={`item-button-container ${color}`}
-      onClick={() => {
-        console.log({ icon });
-      }}
+      onClick={addItems}
     >
-      <Image src={icon} />
-      <p>{itemName}</p>
-    </div>
+      <Image style={{ pointerEvents: "none" }} src={icon} />
+      <p style={{ pointerEvents: "none" }}>{itemName}</p>
+    </button>
   );
 };
 
 export default ItemButton;
+
+/*
+      onClick={(e) => {
+        console.log(e.target.id);
+      } }
+*/

@@ -29,13 +29,13 @@ const Header = ({ mealType, addClient }) => {
   return (
     <Container className="header">
       <Row>
-        <Col>
+        <Col className="icon-container">
           <Image src={burgerQueenIcon} className="header-icons" />
         </Col>
         <Col className="text-container">
           <p>{mealType}</p>
         </Col>
-        <Col>
+        <Col className="icon-container">
           <Image src={userIcon} className="header-icons" />
         </Col>
         <Col className="text-container">

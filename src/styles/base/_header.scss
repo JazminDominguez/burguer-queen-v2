@@ -3,12 +3,16 @@
   text-align: center;
 }
 
+.icon-container {
+  padding: 10px;
+}
+
 .header-icons {
   height: 40px;
 }
 
 .number {
-  font-size: x-large;
+  font-size: 25px;
   font-weight: 600;
 }
 
@@ -17,12 +21,14 @@
   padding: 10px;
   border-bottom: 2px solid;
   border-color: black;
+  min-height: 62px;
 }
 
 .text-container {
   position: relative;
   height: auto;
   width: auto;
+  padding: 10px;
 
   > p {
     margin: 0;
@@ -30,6 +36,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: large;
   }
 
   > input {

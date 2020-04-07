@@ -5,6 +5,7 @@ import { Container, Row, Col } from "react-bootstrap";
 
 import ItemButton from "./ItemButton";
 import Header from "./Header";
+import TicketBar from "./TicketBar";
 
 class Menu extends React.Component {
   constructor(props) {
@@ -14,7 +15,7 @@ class Menu extends React.Component {
       menuBoard: undefined,
       footerOptions: [],
       mealType: undefined,
-      colorClass: undefined
+      colorClass: undefined,
     };
   }
 
@@ -26,35 +27,33 @@ class Menu extends React.Component {
       this.setState({
         footerOptions: Object.keys(menu),
         mealType: meal,
-        isLoaded: true
+        isLoaded: true,
       });
     }
   }
 
-  handleChange = e => {
+  handleChange = (e) => {
     const { addClient } = this.props;
     addClient(e.target.value);
   };
 
+  addItems = (e) => {
+    const { addTicketItem } = this.props;
+    addTicketItem({ item: e.target.id, price: e.target.value });
+  };
+
   render() {
-    const { menu } = this.props;
+    const { menu, clientName, ticket } = this.props;
     const { footerOptions, mealType, menuBoard, colorClass } = this.state;
 
-    if (Object.keys(menu).length === 0) {
-      console.log("soy el menu vacio");
-    } else {
-      console.log("soy menu con info", menu);
-      console.log("soy object keys", Object.keys(menu));
-    }
-
-    const setItems = option => {
+    const setItems = (option) => {
       this.setState({
         menuBoard: menu[option],
-        colorClass: [option]
+        colorClass: [option],
       });
     };
 
-    const mappedFooterButtons = footerOptions.map(option => (
+    const mappedFooterButtons = footerOptions.map((option) => (
       <Col md={3}>
         <div
           key={option}
@@ -79,12 +78,14 @@ class Menu extends React.Component {
                   <div className="board">
                     <Row style={{ paddingLeft: "20px" }}>
                       {menuBoard !== undefined &&
-                        menuBoard.map(item => (
+                        menuBoard.map((item) => (
                           <Col>
                             <ItemButton
+                              addItems={this.addItems}
                               icon={item.logo}
                               color={colorClass}
                               itemName={item.name}
+                              itemPrice={item.price}
                             />
                           </Col>
                         ))}
@@ -98,8 +99,13 @@ class Menu extends React.Component {
                 </Col>
               </Row>
             </Col>
-            <Col sm={4} md={4} className="ticket-component">
-              TICKET AREA
+            <Col
+              sm={4}
+              md={4}
+              className="ticket-component"
+              style={{ padding: "0px" }}
+            >
+              <TicketBar clientName={clientName} ticketItems={ticket} />
             </Col>
           </Row>
         </Container>
@@ -108,7 +114,12 @@ class Menu extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return state;
+const mapStateToProps = (state) => {
+  return {
+    menu: state.menu.menu,
+    meal: state.menu.meal,
+    clientName: state.menu.clientName,
+    ticket: state.ticket,
+  };
 };
 export default connect(mapStateToProps, actionCreators)(Menu);
